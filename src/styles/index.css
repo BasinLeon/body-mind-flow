@@ -506,4 +506,6 @@ a:hover {
   border-radius: var(--radius-full);
 }
 
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
 }
