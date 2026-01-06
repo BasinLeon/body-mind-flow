@@ -1,12 +1,21 @@
-import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, NavLink, useLocation } from 'react-router-dom';
 import { useUserStore } from './store/userStore';
+import { useWorkoutStore } from './store/workoutStore';
 import Onboarding from './components/Onboarding';
 import Dashboard from './components/Dashboard';
 import ExerciseLibrary from './components/ExerciseLibrary';
+import WorkoutBuilder from './components/WorkoutBuilder';
+import ActiveWorkout from './components/ActiveWorkout';
 import './styles/index.css';
 
 function Navigation() {
   const { profile } = useUserStore();
+  const location = useLocation();
+
+  // Hide nav during active workout
+  if (location.pathname === '/active-workout') {
+    return null;
+  }
 
   return (
     <nav className="nav">
@@ -40,6 +49,26 @@ function Navigation() {
   );
 }
 
+function AppRoutes() {
+  const location = useLocation();
+  const isActiveWorkout = location.pathname === '/active-workout';
+
+  return (
+    <div className="app">
+      <Navigation />
+      <main className={`main-content ${isActiveWorkout ? 'fullscreen' : ''}`}>
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/exercises" element={<ExerciseLibrary />} />
+          <Route path="/skills" element={<SkillTreesPlaceholder />} />
+          <Route path="/workout" element={<WorkoutBuilder />} />
+          <Route path="/active-workout" element={<ActiveWorkout />} />
+        </Routes>
+      </main>
+    </div>
+  );
+}
+
 function AppContent() {
   const { onboardingComplete } = useUserStore();
 
@@ -49,17 +78,7 @@ function AppContent() {
 
   return (
     <BrowserRouter>
-      <div className="app">
-        <Navigation />
-        <main className="main-content">
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/exercises" element={<ExerciseLibrary />} />
-            <Route path="/skills" element={<SkillTreesPlaceholder />} />
-            <Route path="/workout" element={<WorkoutPlaceholder />} />
-          </Routes>
-        </main>
-      </div>
+      <AppRoutes />
     </BrowserRouter>
   );
 }
@@ -71,16 +90,6 @@ function SkillTreesPlaceholder() {
       <div className="placeholder-icon">🗺️</div>
       <h1>Skill Trees</h1>
       <p>Interactive skill progression maps coming soon!</p>
-    </div>
-  );
-}
-
-function WorkoutPlaceholder() {
-  return (
-    <div className="placeholder-page">
-      <div className="placeholder-icon">💪</div>
-      <h1>Workout Builder</h1>
-      <p>Create and track your workouts here. Coming soon!</p>
     </div>
   );
 }

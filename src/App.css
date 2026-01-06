@@ -76,6 +76,10 @@
   overflow-y: auto;
 }
 
+.main-content.fullscreen {
+  padding: 0;
+}
+
 /* Placeholder Pages */
 .placeholder-page {
   display: flex;
