@@ -1,0 +1,437 @@
+{
+    "exercises": [
+        {
+            "id": "wall-push-up",
+            "name": "Wall Push-Up",
+            "category": "push",
+            "muscleGroups": [
+                "chest",
+                "triceps",
+                "shoulders"
+            ],
+            "difficulty": 1,
+            "progressions": [],
+            "nextProgression": "incline-push-up",
+            "xpReward": 5,
+            "flowPrompt": "Feel the wall's resistance. Your body is a lever, your breath is power. Inhale down, exhale up.",
+            "formCues": [
+                "Keep body straight",
+                "Elbows track at 45°",
+                "Full range of motion"
+            ],
+            "description": "The foundation of all pushing movements. Perfect for building initial strength and learning proper form."
+        },
+        {
+            "id": "incline-push-up",
+            "name": "Incline Push-Up",
+            "category": "push",
+            "muscleGroups": [
+                "chest",
+                "triceps",
+                "shoulders"
+            ],
+            "difficulty": 2,
+            "progressions": [
+                "wall-push-up"
+            ],
+            "nextProgression": "knee-push-up",
+            "xpReward": 8,
+            "flowPrompt": "Lower the angle, raise your power. Each rep brings you closer to the ground, closer to mastery.",
+            "formCues": [
+                "Core engaged",
+                "Shoulder blades together at bottom",
+                "Controlled tempo"
+            ],
+            "description": "Progressively lowering the incline builds strength toward full push-ups."
+        },
+        {
+            "id": "knee-push-up",
+            "name": "Knee Push-Up",
+            "category": "push",
+            "muscleGroups": [
+                "chest",
+                "triceps",
+                "shoulders"
+            ],
+            "difficulty": 2,
+            "progressions": [
+                "incline-push-up"
+            ],
+            "nextProgression": "push-up",
+            "xpReward": 8,
+            "flowPrompt": "From your knees, you build the strength to rise. Every rep is a step toward full expression.",
+            "formCues": [
+                "Hips forward",
+                "Core tight",
+                "Touch chest to ground"
+            ],
+            "description": "A stepping stone to full push-ups while maintaining proper form."
+        },
+        {
+            "id": "push-up",
+            "name": "Push-Up",
+            "category": "push",
+            "muscleGroups": [
+                "chest",
+                "triceps",
+                "shoulders",
+                "core"
+            ],
+            "difficulty": 3,
+            "progressions": [
+                "knee-push-up",
+                "incline-push-up"
+            ],
+            "nextProgression": "diamond-push-up",
+            "xpReward": 10,
+            "flowPrompt": "You are the plank. You are the power. Breathe in as you descend, breathe out as you rise like a wave.",
+            "formCues": [
+                "Hollow body position",
+                "Elbows 45°",
+                "Full lockout at top"
+            ],
+            "description": "The king of bodyweight exercises. A full-body movement disguised as a chest exercise."
+        },
+        {
+            "id": "diamond-push-up",
+            "name": "Diamond Push-Up",
+            "category": "push",
+            "muscleGroups": [
+                "triceps",
+                "chest",
+                "shoulders"
+            ],
+            "difficulty": 4,
+            "progressions": [
+                "push-up"
+            ],
+            "nextProgression": "archer-push-up",
+            "xpReward": 15,
+            "flowPrompt": "Hands form a diamond, triceps ignite. Feel the burn as a gift—transformation in action.",
+            "formCues": [
+                "Hands under chest",
+                "Elbows brush ribs",
+                "Controlled descent"
+            ],
+            "description": "Intense triceps focus while maintaining pushing pattern."
+        },
+        {
+            "id": "archer-push-up",
+            "name": "Archer Push-Up",
+            "category": "push",
+            "muscleGroups": [
+                "chest",
+                "triceps",
+                "shoulders",
+                "core"
+            ],
+            "difficulty": 5,
+            "progressions": [
+                "diamond-push-up"
+            ],
+            "nextProgression": "one-arm-push-up",
+            "xpReward": 20,
+            "flowPrompt": "Draw the bow. One arm works, one arm guides. This is the path to unilateral mastery.",
+            "formCues": [
+                "Rotate torso slightly",
+                "Straight arm fully extended",
+                "Control the negative"
+            ],
+            "description": "The bridge to one-arm push-up mastery."
+        },
+        {
+            "id": "dead-hang",
+            "name": "Dead Hang",
+            "category": "pull",
+            "muscleGroups": [
+                "forearms",
+                "shoulders",
+                "lats"
+            ],
+            "difficulty": 1,
+            "progressions": [],
+            "nextProgression": "active-hang",
+            "xpReward": 5,
+            "flowPrompt": "Release tension. Let gravity stretch you. Your grip is your foundation—build it strong.",
+            "formCues": [
+                "Shoulders relaxed",
+                "Breathe deeply",
+                "Full grip engagement"
+            ],
+            "description": "Build grip strength and shoulder mobility. The foundation of all pulling."
+        },
+        {
+            "id": "active-hang",
+            "name": "Active Hang",
+            "category": "pull",
+            "muscleGroups": [
+                "lats",
+                "shoulders",
+                "forearms"
+            ],
+            "difficulty": 2,
+            "progressions": [
+                "dead-hang"
+            ],
+            "nextProgression": "scap-pull",
+            "xpReward": 8,
+            "flowPrompt": "Engage your lats. Pull shoulders down and back. You're no longer hanging—you're holding.",
+            "formCues": [
+                "Depress scapulae",
+                "Slight lat engagement",
+                "Hollow body"
+            ],
+            "description": "Learn scapular control and lat activation."
+        },
+        {
+            "id": "scap-pull",
+            "name": "Scapular Pull",
+            "category": "pull",
+            "muscleGroups": [
+                "lats",
+                "rhomboids",
+                "lower traps"
+            ],
+            "difficulty": 2,
+            "progressions": [
+                "active-hang"
+            ],
+            "nextProgression": "negative-pull-up",
+            "xpReward": 10,
+            "flowPrompt": "Shoulder blades dance together, then apart. Small movement, profound strength.",
+            "formCues": [
+                "Arms stay straight",
+                "Squeeze shoulder blades",
+                "Control both phases"
+            ],
+            "description": "Master the first phase of the pull-up: scapular retraction."
+        },
+        {
+            "id": "negative-pull-up",
+            "name": "Negative Pull-Up",
+            "category": "pull",
+            "muscleGroups": [
+                "lats",
+                "biceps",
+                "forearms",
+                "core"
+            ],
+            "difficulty": 3,
+            "progressions": [
+                "scap-pull"
+            ],
+            "nextProgression": "pull-up",
+            "xpReward": 12,
+            "flowPrompt": "Jump up, lower slow. Fight gravity with grace. The eccentric phase builds the strength to rise.",
+            "formCues": [
+                "5-second descent minimum",
+                "Elbows track back",
+                "Full extension at bottom"
+            ],
+            "description": "The eccentric phase builds pulling strength efficiently."
+        },
+        {
+            "id": "pull-up",
+            "name": "Pull-Up",
+            "category": "pull",
+            "muscleGroups": [
+                "lats",
+                "biceps",
+                "forearms",
+                "rhomboids",
+                "core"
+            ],
+            "difficulty": 4,
+            "progressions": [
+                "negative-pull-up"
+            ],
+            "nextProgression": "chest-to-bar",
+            "xpReward": 20,
+            "flowPrompt": "Pull the world toward you. Chin clears the bar—you've conquered gravity itself.",
+            "formCues": [
+                "Initiate with scap pull",
+                "Drive elbows down",
+                "Chin over bar"
+            ],
+            "description": "The ultimate upper body pulling movement. A true milestone."
+        },
+        {
+            "id": "squat",
+            "name": "Bodyweight Squat",
+            "category": "legs",
+            "muscleGroups": [
+                "quads",
+                "glutes",
+                "hamstrings",
+                "core"
+            ],
+            "difficulty": 2,
+            "progressions": [],
+            "nextProgression": "deep-squat",
+            "xpReward": 8,
+            "flowPrompt": "Sit back, stand tall. Your legs are pillars of strength, rooted to the earth.",
+            "formCues": [
+                "Knees track toes",
+                "Weight in heels",
+                "Chest up"
+            ],
+            "description": "The foundational lower body movement pattern."
+        },
+        {
+            "id": "deep-squat",
+            "name": "Deep Squat",
+            "category": "legs",
+            "muscleGroups": [
+                "quads",
+                "glutes",
+                "hamstrings",
+                "hip flexors"
+            ],
+            "difficulty": 3,
+            "progressions": [
+                "squat"
+            ],
+            "nextProgression": "split-squat",
+            "xpReward": 10,
+            "flowPrompt": "Descend into the depths. Your hips open, your spirit grounds. This is primal movement.",
+            "formCues": [
+                "Ass to grass",
+                "Pause at bottom",
+                "Maintain upright torso"
+            ],
+            "description": "Full range of motion squatting for mobility and strength."
+        },
+        {
+            "id": "split-squat",
+            "name": "Split Squat",
+            "category": "legs",
+            "muscleGroups": [
+                "quads",
+                "glutes",
+                "hip flexors"
+            ],
+            "difficulty": 3,
+            "progressions": [
+                "deep-squat"
+            ],
+            "nextProgression": "bulgarian-split-squat",
+            "xpReward": 12,
+            "flowPrompt": "One leg forward, one back. Balance and power in harmony.",
+            "formCues": [
+                "90° both knees",
+                "Vertical shin",
+                "Control the descent"
+            ],
+            "description": "Unilateral leg training for balance and strength."
+        },
+        {
+            "id": "plank",
+            "name": "Plank",
+            "category": "core",
+            "muscleGroups": [
+                "core",
+                "shoulders",
+                "glutes"
+            ],
+            "difficulty": 2,
+            "progressions": [],
+            "nextProgression": "side-plank",
+            "xpReward": 8,
+            "flowPrompt": "You are a steel beam. Unwavering. Unbreakable. Breathe and hold your center.",
+            "formCues": [
+                "Hollow body",
+                "Squeeze glutes",
+                "Neutral spine"
+            ],
+            "description": "The foundation of core stability."
+        },
+        {
+            "id": "hollow-body-hold",
+            "name": "Hollow Body Hold",
+            "category": "core",
+            "muscleGroups": [
+                "core",
+                "hip flexors"
+            ],
+            "difficulty": 3,
+            "progressions": [
+                "plank"
+            ],
+            "nextProgression": "l-sit",
+            "xpReward": 12,
+            "flowPrompt": "Lower back presses to floor. Your body is a bow, ready to release power.",
+            "formCues": [
+                "Lower back flat",
+                "Legs straight",
+                "Arms overhead"
+            ],
+            "description": "Essential gymnastic position for core control."
+        },
+        {
+            "id": "l-sit",
+            "name": "L-Sit",
+            "category": "core",
+            "muscleGroups": [
+                "core",
+                "hip flexors",
+                "triceps",
+                "shoulders"
+            ],
+            "difficulty": 5,
+            "progressions": [
+                "hollow-body-hold"
+            ],
+            "nextProgression": "v-sit",
+            "xpReward": 25,
+            "flowPrompt": "Lift yourself. Defy gravity. Your body forms the letter that represents learning—L.",
+            "formCues": [
+                "Depress shoulders",
+                "Lock arms",
+                "Point toes"
+            ],
+            "description": "A true test of core and hip flexor strength."
+        }
+    ],
+    "categories": [
+        {
+            "id": "push",
+            "name": "Push",
+            "icon": "💪",
+            "color": "#ff6b6b"
+        },
+        {
+            "id": "pull",
+            "name": "Pull",
+            "icon": "🎯",
+            "color": "#4ecdc4"
+        },
+        {
+            "id": "legs",
+            "name": "Legs",
+            "icon": "🦵",
+            "color": "#45b7d1"
+        },
+        {
+            "id": "core",
+            "name": "Core",
+            "icon": "🔥",
+            "color": "#f9ca24"
+        }
+    ],
+    "muscleGroups": [
+        "chest",
+        "triceps",
+        "shoulders",
+        "biceps",
+        "forearms",
+        "lats",
+        "rhomboids",
+        "lower traps",
+        "core",
+        "quads",
+        "glutes",
+        "hamstrings",
+        "hip flexors",
+        "calves"
+    ]
+}

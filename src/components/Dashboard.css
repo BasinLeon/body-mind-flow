@@ -1,0 +1,259 @@
+.dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-8);
+}
+
+/* Header */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-8);
+}
+
+.header-left h1 {
+    font-size: var(--text-3xl);
+    margin-bottom: var(--space-2);
+}
+
+.header-left p {
+    color: var(--color-text-secondary);
+}
+
+.streak-badge {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-5);
+    background: linear-gradient(135deg, rgba(255, 100, 50, 0.2) 0%, rgba(255, 50, 50, 0.1) 100%);
+    border: 1px solid rgba(255, 100, 50, 0.3);
+    border-radius: var(--radius-full);
+}
+
+.streak-icon {
+    font-size: 1.5rem;
+}
+
+.streak-count {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
+
+.streak-label {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+}
+
+/* Level Card */
+.level-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-6);
+    margin-bottom: var(--space-6);
+}
+
+.level-info {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.level-badge {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-dim) 100%);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-glow-gold);
+}
+
+.level-number {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    font-weight: 800;
+    color: var(--color-bg-deep);
+}
+
+.level-details h3 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-1);
+}
+
+.level-details p {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+}
+
+.xp-progress {
+    flex: 1;
+}
+
+.xp-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--space-2);
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+}
+
+.stat-card {
+    text-align: center;
+    padding: var(--space-5);
+}
+
+.stat-card .stat-value {
+    font-size: var(--text-3xl);
+    background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-arcane) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Coach Message */
+.coach-message {
+    display: flex;
+    align-items: center;
+    gap: var(--space-5);
+    margin-bottom: var(--space-8);
+    padding: var(--space-6);
+}
+
+.coach-avatar {
+    font-size: 3rem;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg-elevated);
+    border-radius: var(--radius-xl);
+}
+
+.coach-content h4 {
+    font-size: var(--text-sm);
+    color: var(--color-gold);
+    margin-bottom: var(--space-2);
+}
+
+.coach-content p {
+    font-size: var(--text-lg);
+    font-style: italic;
+    color: var(--color-text-secondary);
+}
+
+/* Skill Trees Section */
+.skill-trees-section {
+    margin-bottom: var(--space-8);
+}
+
+.skill-trees-section h2 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-4);
+}
+
+.skill-trees-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-4);
+}
+
+.skill-tree-card {
+    padding: var(--space-5);
+}
+
+.tree-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+}
+
+.tree-icon {
+    font-size: 1.5rem;
+}
+
+.tree-header h4 {
+    font-size: var(--text-base);
+}
+
+.tree-progress-bar {
+    height: 8px;
+    background: var(--color-bg-elevated);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    margin-bottom: var(--space-3);
+}
+
+.tree-progress-fill {
+    height: 100%;
+    border-radius: var(--radius-full);
+    transition: width var(--transition-slow);
+}
+
+.tree-stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+}
+
+/* Quick Actions */
+.quick-actions {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    padding-top: var(--space-4);
+}
+
+.quick-actions .btn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skill-trees-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .level-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .xp-progress {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .dashboard {
+        padding: var(--space-4);
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        gap: var(--space-4);
+    }
+
+    .quick-actions {
+        flex-direction: column;
+    }
+}

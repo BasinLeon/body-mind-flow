@@ -1,0 +1,349 @@
+{
+    "skillTrees": [
+        {
+            "id": "push-mastery",
+            "name": "Push Mastery",
+            "description": "Master the art of pushing—from wall to one-arm",
+            "icon": "💪",
+            "color": "#ff6b6b",
+            "nodes": [
+                {
+                    "exerciseId": "wall-push-up",
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "unlockRequirements": null,
+                    "masteryThreshold": {
+                        "reps": 20,
+                        "sets": 3
+                    }
+                },
+                {
+                    "exerciseId": "incline-push-up",
+                    "position": {
+                        "x": 1,
+                        "y": 0
+                    },
+                    "unlockRequirements": {
+                        "exerciseId": "wall-push-up",
+                        "reps": 15,
+                        "sets": 3
+                    },
+                    "masteryThreshold": {
+                        "reps": 15,
+                        "sets": 3
+                    }
+                },
+                {
+                    "exerciseId": "knee-push-up",
+                    "position": {
+                        "x": 2,
+                        "y": 0
+                    },
+                    "unlockRequirements": {
+                        "exerciseId": "incline-push-up",
+                        "reps": 12,
+                        "sets": 3
+                    },
+                    "masteryThreshold": {
+                        "reps": 15,
+                        "sets": 3
+                    }
+                },
+                {
+                    "exerciseId": "push-up",
+                    "position": {
+                        "x": 3,
+                        "y": 0
+                    },
+                    "unlockRequirements": {
+                        "exerciseId": "knee-push-up",
+                        "reps": 12,
+                        "sets": 3
+                    },
+                    "masteryThreshold": {
+                        "reps": 20,
+                        "sets": 3
+                    }
+                },
+                {
+                    "exerciseId": "diamond-push-up",
+                    "position": {
+                        "x": 4,
+                        "y": 0
+                    },
+                    "unlockRequirements": {
+                        "exerciseId": "push-up",
+                        "reps": 15,
+                        "sets": 3
+                    },
+                    "masteryThreshold": {
+                        "reps": 15,
+                        "sets": 3
+                    }
+                },
+                {
+                    "exerciseId": "archer-push-up",
+                    "position": {
+                        "x": 5,
+                        "y": 0
+                    },
+                    "unlockRequirements": {
+                        "exerciseId": "diamond-push-up",
+                        "reps": 10,
+                        "sets": 3
+                    },
+                    "masteryThreshold": {
+                        "reps": 10,
+                        "sets": 3
+                    }
+                }
+            ]
+        },
+        {
+            "id": "pull-mastery",
+            "name": "Pull Mastery",
+            "description": "Conquer gravity—from dead hang to muscle-up",
+            "icon": "🎯",
+            "color": "#4ecdc4",
+            "nodes": [
+                {
+                    "exerciseId": "dead-hang",
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "unlockRequirements": null,
+                    "masteryThreshold": {
+                        "seconds": 30,
+                        "sets": 3
+                    }
+                },
+                {
+                    "exerciseId": "active-hang",
+                    "position": {
+                        "x": 1,
+                        "y": 0
+                    },
+                    "unlockRequirements": {
+                        "exerciseId": "dead-hang",
+                        "seconds": 20,
+                        "sets": 3
+                    },
+                    "masteryThreshold": {
+                        "seconds": 20,
+                        "sets": 3
+                    }
+                },
+                {
+                    "exerciseId": "scap-pull",
+                    "position": {
+                        "x": 2,
+                        "y": 0
+                    },
+                    "unlockRequirements": {
+                        "exerciseId": "active-hang",
+                        "seconds": 15,
+                        "sets": 3
+                    },
+                    "masteryThreshold": {
+                        "reps": 10,
+                        "sets": 3
+                    }
+                },
+                {
+                    "exerciseId": "negative-pull-up",
+                    "position": {
+                        "x": 3,
+                        "y": 0
+                    },
+                    "unlockRequirements": {
+                        "exerciseId": "scap-pull",
+                        "reps": 8,
+                        "sets": 3
+                    },
+                    "masteryThreshold": {
+                        "reps": 5,
+                        "sets": 3,
+                        "tempo": "5s negative"
+                    }
+                },
+                {
+                    "exerciseId": "pull-up",
+                    "position": {
+                        "x": 4,
+                        "y": 0
+                    },
+                    "unlockRequirements": {
+                        "exerciseId": "negative-pull-up",
+                        "reps": 5,
+                        "sets": 3
+                    },
+                    "masteryThreshold": {
+                        "reps": 10,
+                        "sets": 3
+                    }
+                }
+            ]
+        },
+        {
+            "id": "leg-mastery",
+            "name": "Leg Mastery",
+            "description": "Build pillars of strength—from squat to pistol",
+            "icon": "🦵",
+            "color": "#45b7d1",
+            "nodes": [
+                {
+                    "exerciseId": "squat",
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "unlockRequirements": null,
+                    "masteryThreshold": {
+                        "reps": 20,
+                        "sets": 3
+                    }
+                },
+                {
+                    "exerciseId": "deep-squat",
+                    "position": {
+                        "x": 1,
+                        "y": 0
+                    },
+                    "unlockRequirements": {
+                        "exerciseId": "squat",
+                        "reps": 15,
+                        "sets": 3
+                    },
+                    "masteryThreshold": {
+                        "reps": 15,
+                        "sets": 3
+                    }
+                },
+                {
+                    "exerciseId": "split-squat",
+                    "position": {
+                        "x": 2,
+                        "y": 0
+                    },
+                    "unlockRequirements": {
+                        "exerciseId": "deep-squat",
+                        "reps": 12,
+                        "sets": 3
+                    },
+                    "masteryThreshold": {
+                        "reps": 12,
+                        "sets": 3
+                    }
+                }
+            ]
+        },
+        {
+            "id": "core-mastery",
+            "name": "Core Mastery",
+            "description": "Forge an unbreakable center—from plank to front lever",
+            "icon": "🔥",
+            "color": "#f9ca24",
+            "nodes": [
+                {
+                    "exerciseId": "plank",
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "unlockRequirements": null,
+                    "masteryThreshold": {
+                        "seconds": 60,
+                        "sets": 3
+                    }
+                },
+                {
+                    "exerciseId": "hollow-body-hold",
+                    "position": {
+                        "x": 1,
+                        "y": 0
+                    },
+                    "unlockRequirements": {
+                        "exerciseId": "plank",
+                        "seconds": 45,
+                        "sets": 3
+                    },
+                    "masteryThreshold": {
+                        "seconds": 30,
+                        "sets": 3
+                    }
+                },
+                {
+                    "exerciseId": "l-sit",
+                    "position": {
+                        "x": 2,
+                        "y": 0
+                    },
+                    "unlockRequirements": {
+                        "exerciseId": "hollow-body-hold",
+                        "seconds": 20,
+                        "sets": 3
+                    },
+                    "masteryThreshold": {
+                        "seconds": 15,
+                        "sets": 3
+                    }
+                }
+            ]
+        }
+    ],
+    "levelThresholds": [
+        {
+            "level": 1,
+            "xpRequired": 0,
+            "title": "Novice"
+        },
+        {
+            "level": 2,
+            "xpRequired": 100,
+            "title": "Apprentice"
+        },
+        {
+            "level": 3,
+            "xpRequired": 250,
+            "title": "Initiate"
+        },
+        {
+            "level": 4,
+            "xpRequired": 500,
+            "title": "Practitioner"
+        },
+        {
+            "level": 5,
+            "xpRequired": 850,
+            "title": "Adept"
+        },
+        {
+            "level": 6,
+            "xpRequired": 1300,
+            "title": "Journeyman"
+        },
+        {
+            "level": 7,
+            "xpRequired": 1900,
+            "title": "Expert"
+        },
+        {
+            "level": 8,
+            "xpRequired": 2700,
+            "title": "Master"
+        },
+        {
+            "level": 9,
+            "xpRequired": 3800,
+            "title": "Grandmaster"
+        },
+        {
+            "level": 10,
+            "xpRequired": 5200,
+            "title": "Legend"
+        }
+    ]
+}
