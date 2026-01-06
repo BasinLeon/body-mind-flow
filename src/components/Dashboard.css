@@ -223,6 +223,71 @@
     gap: var(--space-2);
 }
 
+/* Clickable coach card */
+.coach-message.clickable {
+    cursor: pointer;
+    position: relative;
+}
+
+.coach-message.clickable:hover {
+    border-color: var(--color-gold);
+}
+
+.chat-hint {
+    position: absolute;
+    right: var(--space-4);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+}
+
+.coach-message.clickable:hover .chat-hint {
+    opacity: 1;
+}
+
+/* Skill tree cards as links */
+a.skill-tree-card {
+    text-decoration: none;
+    transition: all var(--transition-base);
+}
+
+a.skill-tree-card:hover {
+    border-color: var(--color-gold);
+    transform: translateY(-2px);
+}
+
+/* AI Coach FAB */
+.ai-coach-fab {
+    position: fixed;
+    bottom: var(--space-6);
+    right: var(--space-6);
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-arcane) 100%);
+    border: none;
+    border-radius: var(--radius-full);
+    font-size: 1.8rem;
+    cursor: pointer;
+    box-shadow: var(--shadow-elevated), 0 0 30px rgba(255, 215, 0, 0.3);
+    transition: all var(--transition-base);
+    z-index: 100;
+}
+
+.ai-coach-fab:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-elevated), 0 0 40px rgba(255, 215, 0, 0.5);
+}
+
+.ai-coach-fab:active {
+    transform: scale(0.95);
+}
+
 /* Responsive */
 @media (max-width: 900px) {
     .stats-grid {

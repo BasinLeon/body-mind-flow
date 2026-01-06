@@ -1,9 +1,14 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useUserStore } from '../store/userStore';
+import AICoach from './AICoach';
 import exerciseData from '../data/exercises.json';
 import progressionData from '../data/progressions.json';
 import './Dashboard.css';
 
 export default function Dashboard() {
+    const [showCoach, setShowCoach] = useState(false);
+
     const {
         profile,
         currentStreak,
@@ -112,13 +117,17 @@ export default function Dashboard() {
                 </div>
             </section>
 
-            {/* Coach Message */}
-            <section className="coach-message card-glass card">
+            {/* Coach Message - Clickable */}
+            <section
+                className="coach-message card-glass card clickable"
+                onClick={() => setShowCoach(true)}
+            >
                 <div className="coach-avatar">{coach.icon}</div>
                 <div className="coach-content">
                     <h4>{coach.name}</h4>
                     <p>"{encouragement}"</p>
                 </div>
+                <span className="chat-hint">💬 Chat</span>
             </section>
 
             {/* Skill Trees Preview */}
@@ -126,7 +135,7 @@ export default function Dashboard() {
                 <h2>Skill Trees</h2>
                 <div className="skill-trees-grid">
                     {skillTreeProgress.map(tree => (
-                        <div key={tree.id} className="skill-tree-card card">
+                        <Link key={tree.id} to="/skills" className="skill-tree-card card">
                             <div className="tree-header">
                                 <span className="tree-icon">{tree.icon}</span>
                                 <h4>{tree.name}</h4>
@@ -144,23 +153,35 @@ export default function Dashboard() {
                                 <span>{tree.unlockedNodes}/{tree.totalNodes} unlocked</span>
                                 <span>{tree.masteredNodes} mastered</span>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </section>
 
             {/* Quick Actions */}
             <section className="quick-actions">
-                <button className="btn btn-primary btn-lg">
+                <Link to="/workout" className="btn btn-primary btn-lg">
                     <span>💪</span> Start Workout
-                </button>
-                <button className="btn btn-secondary">
+                </Link>
+                <Link to="/exercises" className="btn btn-secondary">
                     <span>📚</span> Exercise Library
-                </button>
-                <button className="btn btn-secondary">
+                </Link>
+                <Link to="/skills" className="btn btn-secondary">
                     <span>🗺️</span> Skill Trees
-                </button>
+                </Link>
             </section>
+
+            {/* Floating AI Coach Button */}
+            <button
+                className="ai-coach-fab"
+                onClick={() => setShowCoach(true)}
+                title="Chat with Coach"
+            >
+                {coach.icon}
+            </button>
+
+            {/* AI Coach Panel */}
+            <AICoach isOpen={showCoach} onClose={() => setShowCoach(false)} />
         </div>
     );
 }

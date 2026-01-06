@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route, NavLink, useLocation } from 'react-router-dom';
 import { useUserStore } from './store/userStore';
-import { useWorkoutStore } from './store/workoutStore';
 import Onboarding from './components/Onboarding';
 import Dashboard from './components/Dashboard';
 import ExerciseLibrary from './components/ExerciseLibrary';
 import WorkoutBuilder from './components/WorkoutBuilder';
 import ActiveWorkout from './components/ActiveWorkout';
+import SkillTrees from './components/SkillTrees';
 import './styles/index.css';
 
 function Navigation() {
@@ -60,7 +60,7 @@ function AppRoutes() {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/exercises" element={<ExerciseLibrary />} />
-          <Route path="/skills" element={<SkillTreesPlaceholder />} />
+          <Route path="/skills" element={<SkillTrees />} />
           <Route path="/workout" element={<WorkoutBuilder />} />
           <Route path="/active-workout" element={<ActiveWorkout />} />
         </Routes>
@@ -80,17 +80,6 @@ function AppContent() {
     <BrowserRouter>
       <AppRoutes />
     </BrowserRouter>
-  );
-}
-
-// Placeholder components for routes not yet built
-function SkillTreesPlaceholder() {
-  return (
-    <div className="placeholder-page">
-      <div className="placeholder-icon">🗺️</div>
-      <h1>Skill Trees</h1>
-      <p>Interactive skill progression maps coming soon!</p>
-    </div>
   );
 }
 
